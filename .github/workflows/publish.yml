@@ -3,7 +3,9 @@ on: workflow_dispatch
 jobs:
     build:
         name: Build
-        runs-on: macos-latest
+        # TODO mac once we get it working
+        # runs-on: macos-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
