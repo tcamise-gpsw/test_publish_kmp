@@ -1,5 +1,3 @@
-package com.gopro.capitalize
-
 import android.os.Build
 
 class AndroidPlatform : Platform {

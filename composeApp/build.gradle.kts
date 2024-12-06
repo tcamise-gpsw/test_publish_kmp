@@ -46,6 +46,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(projects.capitalizeLib)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -55,7 +56,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.gopro.capitalize"
+    namespace = "com"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
@@ -87,7 +88,7 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "com.gopro.capitalize.MainKt"
+        mainClass = "MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)

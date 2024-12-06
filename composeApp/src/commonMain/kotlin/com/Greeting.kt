@@ -1,4 +1,6 @@
-package com.gopro.capitalize
+package com
+
+import getPlatform
 
 class Greeting {
     private val platform = getPlatform()

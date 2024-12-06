@@ -1,6 +1,4 @@
-package com.gopro.capitalize.business
-
-fun uncapitalize(text: String): String =
+fun myUncapitalize(text: String): String =
     text.split(" ")
         .map { word ->
             word.replaceFirstChar { char ->
@@ -8,7 +6,7 @@ fun uncapitalize(text: String): String =
             }
         }.reduce { a, b -> a + " " + b }
 
-fun capitalize(text: String): String =
+fun myCapitalize(text: String): String =
     text.split(" ")
         .map { word ->
             word.replaceFirstChar { char ->

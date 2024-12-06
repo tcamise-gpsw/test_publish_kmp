@@ -1,5 +1,3 @@
-package com.gopro.capitalize
-
 import platform.UIKit.UIDevice
 
 class IOSPlatform: Platform {

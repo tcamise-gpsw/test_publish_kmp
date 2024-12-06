@@ -1,4 +1,4 @@
-package com.gopro.capitalize
+package com
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

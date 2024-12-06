@@ -1,5 +1,3 @@
-package com.gopro.capitalize
-
 interface Platform {
     val name: String
 }

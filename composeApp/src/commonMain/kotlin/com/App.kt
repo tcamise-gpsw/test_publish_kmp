@@ -1,4 +1,4 @@
-package com.gopro.capitalize
+package com
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -12,8 +12,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.gopro.capitalize.business.capitalize
-import com.gopro.capitalize.business.uncapitalize
+import myCapitalize
+import myUncapitalize
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -25,7 +25,7 @@ fun App() {
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
             Text(testText)
             Button(onClick = {
-                testText = if (shouldCapitalize) capitalize(testText) else uncapitalize(testText)
+                testText = if (shouldCapitalize) myCapitalize(testText) else myUncapitalize(testText)
                 shouldCapitalize = !shouldCapitalize
             }) {
                 Text("Click me to toggle capitalize!")
