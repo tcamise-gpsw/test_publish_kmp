@@ -85,7 +85,6 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
-    implementation(libs.gopro.capitalize)
 }
 
 compose.desktop {

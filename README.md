@@ -4,7 +4,7 @@ is the starting point.
 It instructs us to use the [gradle-maven-publish-plugin](https://github.com/vanniktech/gradle-maven-publish-plugin?tab=readme-ov-file)
 which is additional functionality on top of the default [maven-publish](https://docs.gradle.org/current/userguide/publishing_maven.html) plugin.
 
-We're first trying to publish locally via `gradle publishToMavenLocal` but its failing due to some signing stuff:
+We're first trying to publish locally via `gradle :capitalizeLib:publishToMavenLocal` but its failing due to some signing stuff:
 
 ```text
 1: Task failed with an exception.
@@ -16,9 +16,11 @@ Execution failed for task ':capitalizeLib:signAndroidDebugPublication'.
 
 Let's trying following [these steps](https://vanniktech.github.io/gradle-maven-publish-plugin/central/).
 
-I've registered and verified Sonatype to my Github Ac  count. I've created and distributed a GPG key (via WSL).
-Password is "password". These credentials are stored in my global (per-user) `gradle.properties`
+I've registered and verified Sonatype to my Github Ac  count. I've created and distributed a GPG key (via WSL). 
+These credentials are stored in my global (per-user) `gradle.properties`
 
 Publishing to local Maven and consuming via ComposeApp is working.
 
-Next...publish to Maven Central.
+Next...publish to Maven Central via `gradle :capitalizeLib:publishToMavenCentral`
+
+Once it is validated by Sonatype, click Publish. It's available [here]()

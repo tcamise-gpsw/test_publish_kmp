@@ -11,7 +11,7 @@ plugins {
 mavenPublishing {
     // Define coordinates for the published artifact
     coordinates(
-        groupId = "com.gopro",
+        groupId = "io.github.tcamise-gpsw",
         artifactId = "capitalize",
         version = "1.0.0"
     )
