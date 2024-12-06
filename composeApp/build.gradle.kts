@@ -46,7 +46,8 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
-            implementation(projects.capitalizeLib)
+//            implementation(projects.capitalizeLib)
+            implementation(libs.gopro.capitalize)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
