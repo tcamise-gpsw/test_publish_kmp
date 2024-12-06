@@ -1,14 +1,20 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop.
+This [medium article](https://medium.com/@cristurean.marius.ovidiu/how-to-publish-your-own-kotlin-multiplatform-library-to-mavencentral-4bc02c8e109d)
+is the starting point. 
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+It instructs us to use the [gradle-maven-publish-plugin](https://github.com/vanniktech/gradle-maven-publish-plugin?tab=readme-ov-file)
+which is additional functionality on top of the default [maven-publish](https://docs.gradle.org/current/userguide/publishing_maven.html) plugin.
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+We're first trying to publish locally via `gradle publishToMavenLocal` but its failing due to some signing stuff:
 
+```text
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':capitalizeLib:signAndroidDebugPublication'.
+> Cannot perform signing task ':capitalizeLib:signAndroidDebugPublication' because it has no configured signatory
+```
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+Let's trying following [these steps](https://vanniktech.github.io/gradle-maven-publish-plugin/central/).
+
+I've registered and verified Sonatype to my Github Ac  count. I've created and distributed a GPG key (via WSL).
+Password is "password" 
