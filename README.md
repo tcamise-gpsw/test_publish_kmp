@@ -17,4 +17,8 @@ Execution failed for task ':capitalizeLib:signAndroidDebugPublication'.
 Let's trying following [these steps](https://vanniktech.github.io/gradle-maven-publish-plugin/central/).
 
 I've registered and verified Sonatype to my Github Ac  count. I've created and distributed a GPG key (via WSL).
-Password is "password" 
+Password is "password". These credentials are stored in my global (per-user) `gradle.properties`
+
+Publishing to local Maven and consuming via ComposeApp is working.
+
+Next...publish to Maven Central.

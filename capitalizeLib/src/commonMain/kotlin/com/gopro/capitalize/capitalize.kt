@@ -1,10 +1,12 @@
+package com.gopro.capitalize
+
 fun myUncapitalize(text: String): String =
     text.split(" ")
         .map { word ->
             word.replaceFirstChar { char ->
                 char.lowercaseChar()
             }
-        }.reduce { a, b -> a + " " + b }
+        }.reduce { a, b -> "$a $b" }
 
 fun myCapitalize(text: String): String =
     text.split(" ")
@@ -12,4 +14,4 @@ fun myCapitalize(text: String): String =
             word.replaceFirstChar { char ->
                 char.uppercaseChar()
             }
-        }.reduce { a, b -> a + " " + b }
+        }.reduce { a, b -> "$a $b" }
